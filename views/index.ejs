@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Social Login</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  <link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="/vendor/boxicons/css/boxicons.min.css">
+  <link rel="stylesheet" href="/vendor/glightbox/css/glightbox.min.css">
+  <link rel="stylesheet" href="/vendor/remixicon/remixicon.css">
+  <link rel="stylesheet" href="/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+
+<body style="background-image: url(/images/bg1.jpeg);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top" >
+    <div class="container-fluid d-flex align-items-center" style="height: 37px;">
+      <h1 class="logo me-auto" style="margin-left: 60px; color: #444444;"><a href="{% url 'LandingPage" class="logo me-auto"><img src="/images/logo.jpeg" alt="" class="img-fluid"></a> Quantum<span style="color: #1977cc; font-size: 30px;">Hunts</span></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+    <div class="container" id="container" style="margin-top: 120px; height: 400px;">
+        <div class="form-container sign-up-container">
+            <form action="/auth/facebook">
+                 <h1 style="margin-bottom: 20px;">Facebook Login</h1>
+                <button style="border: 1px solid #3b5998;
+                background-color: white;"><img src="/images/fb_icon.png" alt=""  style="width: 40px; color: white;"><span style="color: black; font-size: 15px;">Sign in with Facebook</span></button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="/auth/google">    
+                <h1 style="margin-bottom: 20px;">Google Login</h1> 
+                <button style="border: 1px solid #327bf8;
+                background-color: white;"><img src="/images/g_icon.png" alt="" class="img-fluid" style="width: 40px;"><span style="color: black; font-size: 15px;">Sign in with Google</span></button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay" style="background: #327bf8;
+            background: -webkit-linear-gradient(to right, #56b6ff, #327bf8);
+            background: linear-gradient(to right, #56b6ff, #327bf8);"  >
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome To QuantumHunts</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn" style="padding: 10px 15px;">Go to Google Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome To QuantumHunts</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signUp" style="padding: 10px 15px;">Go to Facebook Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script src="/javascripts/login.js" type="text/javascript"></script>
+</body>
+</html>

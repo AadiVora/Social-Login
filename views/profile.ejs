@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Social Login</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"> 
+  <link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="/vendor/boxicons/css/boxicons.min.css">
+  <link rel="stylesheet" href="/vendor/glightbox/css/glightbox.min.css">
+  <link rel="stylesheet" href="/vendor/remixicon/remixicon.css">
+  <link rel="stylesheet" href="/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+
+<body style="background-image: url(/images/bg1.jpeg);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top" >
+    <div class="container-fluid d-flex align-items-center" style="height: 37px;">
+      <h1 class="logo me-auto" style="margin-left: 60px; color: #444444;"><a href="{% url 'LandingPage" class="logo me-auto"><img src="/images/logo.jpeg" alt="" class="img-fluid"></a> Quantum<span style="color: #1977cc; font-size: 30px;">Hunts</span></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+         
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <a class="appointment-btn scrollto" style="background: white; color: black; font-size: large; font-weight: 600;"><span>
+          Welcome <%= user.name %>
+      </span></a>
+      <a href="/logout" class="appointment-btn scrollto" style="margin-right: 50px;">
+         <span class="d-none d-md-inline"></span>Logout</a>
+    </div>
+  </header><!-- End Header -->
+
+  <div style="width: 300px; background-color: white">
+    <p style="font-size: 15px;">
+        <center><span style="font-size: 20px; font-weight: bold;">Profile</span></center><br>
+        <center><strong>Id: </strong><%= user.id %><br>
+        <strong>Name: </strong><%= user.name %><br>
+        <strong>Email: </strong><%= user.email %><br>
+        <img style="padding-top: 10px;" src="<%= user.pic %>" width="200" height="200"></center>
+    </p>
+  </div>
+</body>
